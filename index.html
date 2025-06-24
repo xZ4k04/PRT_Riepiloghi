@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRT Easy_Riepilogo</title>
+    <link rel="stylesheet" href="Style/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📋 Riepilogo Produzione DM</h1>
+            <p></p>
+        </div>
+
+        <div class="form-container">
+            <form id="riepilogoForm">
+                <!-- Informazioni Generali -->
+                <div class="form-section">
+                    <h3>🏢 Informazioni Generali</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="repartoDigitale">Reparto Digitale coinvolto:</label>
+                           <select id="repartoDigitale" name="repartoDigitale">
+                                <option value="">Seleziona...</option>
+                                <option value="Si">Sì</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="nCommessaMadre">N. Commessa Madre:</label>
+                            <input type="text" id="nCommessaMadre" name="nCommessaMadre" placeholder="Es. CM001">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nCommessa">N. Commessa:</label>
+                            <input type="text" id="nCommessa" name="nCommessa" placeholder="Es. C001">
+                        </div>
+                        <div class="form-group">
+                            <label for="cliente">Cliente:</label>
+                            <input type="text" id="cliente" name="cliente" placeholder="Es. Azienda XYZ">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="nomeCommessa">Nome commessa:</label>
+                        <input type="text" id="nomeCommessa" name="nomeCommessa" placeholder="Es. Campagna Marketing 2025">
+                    </div>
+                </div>
+
+                <!-- Specifiche Tecniche -->
+                <div class="form-section">
+                    <h3>⚙️ Specifiche Tecniche</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="provaImbusto">Prova di imbusto:</label>
+                            <select id="provaImbusto" name="provaImbusto">
+                                <option value="">Seleziona...</option>
+                                <option value="Si">Sì</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="cartaConFori">Carta con fori:</label>
+                            <select id="cartaConFori" name="cartaConFori">
+                                <option value="">Seleziona...</option>
+                                <option value="Si">Sì</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="filePath">File Path:</label>
+                        <input type="text" id="filePath" name="filePath" placeholder="Es. /documenti/progetto/file.pdf">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="descrizioneFlusso">Descrizione Flusso:</label>
+                            <textarea id="descrizioneFlusso" name="descrizioneFlusso" rows="3" placeholder="Descrivi il flusso di lavoro..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="infoAggiuntive">Info Aggiuntive:</label>
+                            <textarea id="infoAggiuntive" name="infoAggiuntive" rows="3" placeholder="Informazioni aggiuntive sul progetto..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dettagli File -->
+                <div class="form-section">
+                    <h3>📄 Dettagli File</h3>
+                    <div class="table-container">
+                        <table id="filesTable" class="files-table">
+                            <thead>
+                                <tr>
+                                    <th>Componente</th>
+                                    <th>File</th>
+                                    <th>Formato</th>
+                                    <th>Carta</th>
+                                    <th>Tipo Stampa</th>
+                                    <th>Perforazioni</th>
+                                    <th>Quantità Indirizzi</th>
+                                    <th>Quantità Pag. Pdf</th>
+                                    <th>Azioni</th>
+                                </tr>
+                            </thead>
+                            <tbody id="filesTableBody">
+                                <!-- Le righe verranno aggiunte dinamicamente -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <button type="button" id="addFileBtn" class="btn btn-add">➕ Aggiungi File</button>
+                </div>
+
+                <!-- Quantità e Date -->
+                <div class="form-section">
+                    <h3>📊 Data e Operatore</h3>
+                    <div class="form-group">
+                        <label for="dataOperatore">Data e operatore:</label>
+                        <input type="text" id="dataOperatore" name="dataOperatore" placeholder="Es. 23/06/2025 - Mario Rossi">
+                    </div>
+                </div>
+
+                <!-- Servizi Aggiuntivi -->
+                <div class="form-section">
+                    <h3>📦 Servizi Aggiuntivi</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="imbustamentoCuraDi">Imbustamento a cura di:</label>
+                            <input type="text" id="imbustamentoCuraDi" name="imbustamentoCuraDi" placeholder="Es. Reparto Spedizioni">
+                        </div>
+                        <div class="form-group">
+                            <label for="scatole">Scatole:</label>
+                            <input type="text" id="scatole" name="scatole" placeholder="Es. 10 scatole">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="consegnaInPosta">Consegna in posta:</label>
+                        <textarea id="consegnaInPosta" name="consegnaInPosta" rows="3" placeholder="Es. Spedizione tramite Poste Italiane con tracking"></textarea>
+                    </div>
+                </div>
+
+                <!-- Pulsanti -->
+                <div class="btn-container">
+                    <button type="button" id="generateBtn" class="btn btn-primary">
+                        🚀 Genera JSON
+                    </button>
+                    <button type="button" id="downloadBtn" class="btn btn-secondary">
+                        💾 Scarica File
+                    </button>
+                </div>
+            </form>
+
+            <!-- Messaggi di successo -->
+            <div id="successMessage" class="success-message">
+                ✅ File JSON generato con successo!
+            </div>
+
+            <!-- Anteprima JSON -->
+            <div id="jsonPreview" class="json-preview"></div>
+        </div>
+    </div>
+
+    <script src="ScriptJS.js"></script>
+</body>
+</html>

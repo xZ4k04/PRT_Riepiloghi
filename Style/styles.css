@@ -1,0 +1,298 @@
+    * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .form-container {
+            padding: 40px;
+        }
+
+        .form-section {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: rgba(116, 75, 162, 0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(116, 75, 162, 0.1);
+        }
+
+        .form-section h3 {
+            color: #764ba2;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+            border-bottom: 2px solid #764ba2;
+            padding-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e1e5e9;
+            border-radius: 10px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            transform: translateY(-2px);
+        }
+
+        input:hover, select:hover, textarea:hover {
+            border-color: #667eea;
+        }
+
+        .btn-container {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            min-width: 150px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            box-shadow: 0 8px 20px rgba(245, 87, 108, 0.3);
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(245, 87, 108, 0.4);
+        }
+
+        .btn-add {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+        }
+
+        .btn-add:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(17, 153, 142, 0.3);
+        }
+
+        .btn-remove {
+            background: #ff4757;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-remove:hover {
+            background: #ff3838;
+            transform: scale(1.05);
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .files-table {
+            width: 100%;
+            min-width: 1000px;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .files-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 12px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 11px;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .files-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e1e5e9;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+
+        .files-table tbody tr:hover {
+            background: rgba(102, 126, 234, 0.05);
+        }
+
+        .files-table input, .files-table select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #e1e5e9;
+            border-radius: 5px;
+            font-size: 12px;
+            min-width: 120px;
+        }
+
+        .files-table th:nth-child(1) { min-width: 120px; } /* Componente */
+        .files-table th:nth-child(2) { min-width: 150px; } /* File */
+        .files-table th:nth-child(3) { min-width: 100px; } /* Formato */
+        .files-table th:nth-child(4) { min-width: 100px; } /* Carta */
+        .files-table th:nth-child(5) { min-width: 130px; } /* Tipo Stampa */
+        .files-table th:nth-child(6) { min-width: 120px; } /* Perforazioni */
+        .files-table th:nth-child(7) { min-width: 140px; } /* Quantità Indirizzi */
+        .files-table th:nth-child(8) { min-width: 140px; } /* Quantità Pag. Pdf */
+        .files-table th:nth-child(9) { min-width: 80px; }  /* Azioni */
+
+        .files-table input:focus, .files-table select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+        }
+
+        .json-preview {
+            margin-top: 30px;
+            padding: 20px;
+            background: #1e1e1e;
+            border-radius: 10px;
+            color: #f8f8f2;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            max-height: 300px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            display: none;
+        }
+
+        .success-message {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+            display: none;
+            animation: slideIn 0.5s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                flex-direction: column;
+            }
+            
+            .btn-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .container {
+                margin: 10px;
+                max-width: calc(100% - 20px);
+            }
+            
+            .form-container {
+                padding: 20px;
+            }
+        }
