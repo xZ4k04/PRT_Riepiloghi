@@ -130,7 +130,7 @@ function downloadJSON() {
 	
 	const a = document.createElement('a');
 	a.href = url;
-	a.download = `riepilogo_${jsonData.nCommessa || 'documento'}_${new Date().toISOString().slice(0, 10)}.json`;
+	a.download = `riepilogo_${jsonData.nCommessaMadre || 'documento'}_${jsonData.nCommessa}_${jsonData.cliente}_${new Date().toISOString().slice(0, 10)}.json`;
 	document.body.appendChild(a);
 	a.click();
 	document.body.removeChild(a);
