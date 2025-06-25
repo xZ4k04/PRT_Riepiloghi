@@ -75,6 +75,7 @@ function collectFormData() {
 		nCommessa: document.getElementById('nCommessa').value,
 		cliente: document.getElementById('cliente').value,
 		nomeCommessa: document.getElementById('nomeCommessa').value,
+		TotaleIndirizzi: document.getElementById('TotaleIndirizzi').value,
 		provaImbusto: document.getElementById('provaImbusto').value,
 		cartaConFori: document.getElementById('cartaConFori').value,
 		filePath: document.getElementById('filePath').value,
@@ -83,8 +84,10 @@ function collectFormData() {
 		files: collectFileData(),
 		dataOperatore: document.getElementById('dataOperatore').value,
 		imbustamentoCuraDi: document.getElementById('imbustamentoCuraDi').value,
-		scatole: document.getElementById('scatole').value,
+		tipoScatole: document.getElementById('tipoScatole').value,
+		numeroScatole: document.getElementById('numeroScatole').value,
 		consegnaInPosta: document.getElementById('consegnaInPosta').value,
+		luogoConsegnaInPosta: document.getElementById('luogoConsegnaInPosta').value,
 		dataGenerazione: new Date().toLocaleString('it-IT')
 	};
 

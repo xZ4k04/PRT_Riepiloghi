@@ -42,10 +42,16 @@
                             <input type="text" id="cliente" name="cliente" placeholder="Es. Azienda XYZ">
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="nomeCommessa">Nome commessa:</label>
-                        <input type="text" id="nomeCommessa" name="nomeCommessa" placeholder="Es. Campagna Marketing 2025">
-                    </div>
+					<div class="form-row">
+						<div class="form-group">
+							<label for="nomeCommessa">Nome commessa:</label>
+							<input type="text" id="nomeCommessa" name="nomeCommessa" placeholder="Es. Campagna Marketing 2025">
+						</div>
+						<div class="form-group">
+							<label for="TotaleIndirizzi">Totale Indirizzi:</label>
+							<input type="number" id="TotaleIndirizzi" name="TotaleIndirizzi" placeholder="1000">
+						</div>
+					</div>
                 </div>
 
                 <!-- Specifiche Tecniche -->
@@ -111,15 +117,6 @@
                     <button type="button" id="addFileBtn" class="btn btn-add">➕ Aggiungi File</button>
                 </div>
 
-                <!-- Quantità e Date -->
-                <div class="form-section">
-                    <h3>📊 Data e Operatore</h3>
-                    <div class="form-group">
-                        <label for="dataOperatore">Data e operatore:</label>
-                        <input type="text" id="dataOperatore" name="dataOperatore" placeholder="Es. 23/06/2025 - Mario Rossi">
-                    </div>
-                </div>
-
                 <!-- Servizi Aggiuntivi -->
                 <div class="form-section">
                     <h3>📦 Servizi Aggiuntivi</h3>
@@ -128,14 +125,33 @@
                             <label for="imbustamentoCuraDi">Imbustamento a cura di:</label>
                             <input type="text" id="imbustamentoCuraDi" name="imbustamentoCuraDi" placeholder="Es. Reparto Spedizioni">
                         </div>
+						<div class="form-group">
+                            <label for="tipoScatole">Tipo Scatole:</label>
+                            <input type="text" id="tipoScatole" name="tipoScatole" placeholder="C6">
+                        </div>
                         <div class="form-group">
-                            <label for="scatole">Scatole:</label>
-                            <input type="text" id="scatole" name="scatole" placeholder="Es. 10 scatole">
+                            <label for="numeroScatole">Numero Scatole:</label>
+                            <input type="number" id="numeroScatole" name="numeroScatole" placeholder="2">
                         </div>
                     </div>
+					<div class="form-row">
+						<div class="form-group">
+							<label for="consegnaInPosta">Consegna in posta:</label>
+							<input type="date" id="consegnaInPosta" name="consegnaInPosta" placeholder="10/06/2024">
+						</div>
+						<div class="form-group">
+							<label for="luogoConsegnaInPosta">Luogo di consegna:</label>
+							<input type="text" id="luogoConsegnaInPosta" name="luogoConsegnaInPosta" placeholder="Torino">
+						</div>
+					</div>
+                </div>
+				
+				  <!-- Quantità e Date -->
+                <div class="form-section">
+                    <h3>📊 Data e Operatore</h3>
                     <div class="form-group">
-                        <label for="consegnaInPosta">Consegna in posta:</label>
-                        <textarea id="consegnaInPosta" name="consegnaInPosta" rows="3" placeholder="Es. Spedizione tramite Poste Italiane con tracking"></textarea>
+                        <label for="dataOperatore">Data e operatore:</label>
+                        <input type="text" id="dataOperatore" name="dataOperatore" placeholder="Es. 23/06/2025 - Mario Rossi">
                     </div>
                 </div>
 
